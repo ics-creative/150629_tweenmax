@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-<html>
-	<head lang="ja">
-		<meta charset="UTF-8">
-		<title>TweenMax Sample 1</title>
-		<style>
-			body {
-				background: #000000;
-			}
-			#rect {
-				width: 100px;
-				height: 100px;
-				top: 200px;
-				position: relative;
-				border: 2px red solid;
-			}
-		</style>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
-		<script>
-			function init() {
-				// "#rect"の参照を取得する
-				var rect = document.getElementById("rect");
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="google" content="notranslate"/>
+  <title>TweenMax Sample 1</title>
+  <style>
+    body {
+      background: #000000;
+    }
 
-				// タイムラインを作成する
-				var tl = new TimelineMax({repeat: -1});
-				// 右側に2秒かけて移動するモーションを指定する
-				tl.to(rect, 2.0, {left: "800px", rotationZ: 360});
-			}
-		</script>
-	</head>
-	<body onload="init()">
-		<div id="rect"></div>
-	</body>
+    #rect {
+      width: 100px;
+      height: 100px;
+      top: 200px;
+      position: relative;
+      border: 2px red solid;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="rect"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  <script>
+    // "#rect"の参照を取得する
+    var rect = document.getElementById('rect');
+
+    // タイムラインを作成する
+    var tl = new TimelineMax({repeat: -1});
+    // 右側に2秒かけて移動するモーションを指定する
+    tl.to(rect, 2.0, {left: '800px', rotationZ: 360});
+
+  </script>
+</body>
 </html>
