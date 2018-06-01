@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head lang="ja">
+		<meta charset="UTF-8">
+		<title>TweenMax Sample 3</title>
+		<style>
+			body {
+				background: #000000;
+			}
+			#rect {
+				width: 100px;
+				height: 100px;
+				top: 200px;
+				position: relative;
+				border: 2px red solid;
+			}
+		</style>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+		<script>
+			function init() {
+				// "#rect"の参照を取得する
+				var rect = document.getElementById("rect");
+
+				// タイムラインを作成する
+				var tl = new TimelineMax({repeat: -1});
+				// 右側に2秒かけて移動するモーションを指定する
+				tl.to(rect, 2.0, {left: "800px", rotationZ: 360});
+				// 本来のタイムラインの0.25秒の地点まで到達したら
+				tl.addCallback(function () {
+					// 0.1倍速再生にする(スローモーションとなる)
+					tl.timeScale(0.1);
+				}, 0.25);
+				// 本来のタイムラインの0.50秒の地点まで到達したら
+				tl.addCallback(function () {
+					// 1.0倍速再生にする(通常再生速度となる)
+					tl.timeScale(1.0);
+				}, 0.5);
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<div id="rect"></div>
+	</body>
+</html>
