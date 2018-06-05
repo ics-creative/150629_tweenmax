@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@types/gsap": "^1.19.2"
+  }
+}

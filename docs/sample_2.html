@@ -26,10 +26,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
   <script>
     // "#rect"の参照を取得する
-    var rect = document.getElementById('rect');
+    const rect = document.getElementById('rect');
 
     // タイムラインを作成する
-    var tl = new TimelineMax({repeat: -1});
+    const tl = new TimelineMax({repeat: -1});
     // 右側に2秒かけて移動するモーションを指定する
     tl.to(rect, 2.0, {left: '800px', rotationZ: 360});
     // 2倍速再生にする(早送りとなる)
