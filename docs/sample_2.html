@@ -29,6 +29,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script>
+      // "#rect"の参照を取得し、アニメーションを適用
       gsap
         .to("#rect", {
           duration: 2,
@@ -36,7 +37,7 @@
           rotate: 360,
           repeat: -1,
         })
-        .timeScale(2.0);
+        .timeScale(2.0); // 2倍速再生にする(早送りとなる)
     </script>
   </body>
 </html>

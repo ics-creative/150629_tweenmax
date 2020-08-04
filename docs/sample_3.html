@@ -29,13 +29,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script>
-      // "#rect"の参照を取得する
-      const rect = document.getElementById("rect");
-
       // タイムラインを作成する
       const tl = new gsap.timeline({ repeat: -1 });
       // 右側に2秒かけて移動するモーションを指定する
-      tl.add(gsap.to(rect, 2.0, { left: "800px", rotationZ: 360 }));
+      tl.add(gsap.to("#rect", 2.0, { x: 800, rotate: 360 }));
       // 本来のタイムラインの0.25秒の地点まで到達したら
       tl.call(
         () => {
