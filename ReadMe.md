@@ -1,4 +1,4 @@
-ICS MEDIAの記事「[高機能なモーション制作用JSライブラリTweenMaxを使ったタイムリマップ表現](https://ics.media/entry/7162)」のサンプルです。
+ICS MEDIAの記事「[高機能なモーション制作用JSライブラリGSAPを使ったタイムリマップ表現](https://ics.media/entry/7162/)」のサンプルです。
 
 
 ## Sample
